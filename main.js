@@ -101,13 +101,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById('theme-toggle');
     const themeIcon = document.getElementById('theme-icon');
     
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        
-        if (document.body.classList.contains('dark-mode')) {
+    // Check if a theme is already saved in localStorage
+    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
+
+    if (currentTheme) {
+        document.body.classList.add(currentTheme);
+        if (currentTheme === 'dark-mode') {
             themeIcon.classList.replace('bx-moon', 'bx-sun');
         } else {
             themeIcon.classList.replace('bx-sun', 'bx-moon');
         }
+    }
+    
+    themeToggle.addEventListener('click', () => {
+        if (document.body.classList.contains('dark-mode')) {
+            document.body.classList.replace('dark-mode', 'light-mode');
+            themeIcon.classList.replace('bx-sun', 'bx-moon');
+            localStorage.setItem('theme', 'light-mode');
+        } else {
+            document.body.classList.replace('light-mode', 'dark-mode');
+            themeIcon.classList.replace('bx-moon', 'bx-sun');
+            localStorage.setItem('theme', 'dark-mode');
+        }
     });
 });
+
