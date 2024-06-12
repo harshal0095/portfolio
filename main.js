@@ -58,7 +58,7 @@ sr.reveal('.skills__data, .work__img, .contact__input',{interval: 200});
 
 
 document.getElementById('downloadButton').addEventListener('click', function() {
-    var imageUrl = 'assets/img/Resume.png'; // Replace with the actual path to your image file
+    var imageUrl = 'Resume.png'; // Replace with the actual path to your image file
 
     // Create elements for the image and close button
     var overlay = document.createElement('div');
