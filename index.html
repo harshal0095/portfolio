@@ -3,66 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/messagebird/dist/messagebird.js"></script>
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-fJdCFuZIiJR0J2R3jRnvDpAwxwEfuLSV3V3t1KEbVsyMn2eOsxwySTHjB2jnKGtMRN8J9xM/z0gr3Cq9dkL3Fg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Harshu</title>
     <link rel="icon" href="Favicon.ico" type="image/x-icon">
-    <style>
-        :root {
-            --background-color: #ffffff;
-            --text-color: #000000;
-            --primary-color: #007bff;
-            --navbar-background-color: #f8f9fa;
-            --navbar-text-color: #000000;
-        }
-
-        body.dark-mode {
-            --background-color: #2c2c2c;
-            --text-color: #ffffff;
-            --primary-color: #1e90ff;
-            --navbar-background-color: #333333;
-            --navbar-text-color: #ffffff;
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-        }
-
-        /* Navbar styles */
-        .nav {
-            background-color: var(--navbar-background-color);
-        }
-
-        .nav__logo,
-        .nav__link,
-        .nav__toggle i,
-        .theme-toggle i {
-            color: var(--navbar-text-color);
-        }
-
-        /* Other elements using CSS variables */
-        .nav__logo,
-        .nav__link,
-        .section-title,
-        .skills__name,
-        .footer__title,
-        .footer__copy {
-            color: var(--text-color);
-        }
-
-        .button {
-            background-color: var(--primary-color);
-            color: var(--text-color);
-        }
-
-        /* Optional: Change icon color */
-        .home__social-icon i,
-        .footer__icon i {
-            color: var(--text-color);
-        }
-    </style>
 </head>
 <body>
     <header class="l-header">
@@ -75,7 +24,7 @@
                     <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#Experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#project" class="nav__link">Project</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -105,7 +54,7 @@
                     </mask>
                     <g mask="url(#mask0)">
                         <circle cx="239.5" cy="233.5" r="200" fill="teal"/>
-                        <image class="home__blob-img" x="39.5" y="33.5" width="400" height="400" href="pic.png"/>
+                        <image class="home__blob-img" x="39.5" y="33.5" width="400" height="400" href="assets/img/pic.png"/>
                     </g>
                 </svg>
             </div>
@@ -114,7 +63,7 @@
             <h2 class="section-title">About</h2>
             <div class="about__container bd-grid">
                 <div class="about__img">
-                    <img src="about.jpg" alt="">
+                    <img src="assets/img/about.jpg" alt="">
                 </div>
                 <div>
                     <h2 class="about__subtitle">I'm Harshal</h2>
@@ -166,20 +115,32 @@
                     </div>
                 </div>
                 <div>
-                    <img src="Test.jpg" alt="" class="skills__img">
+                    <img src="assets/img/Test.jpg" alt="" class="skills__img">
                 </div>
             </div>
         </section>
-        <section class="work section" id="Experience">
-            <h2 class="section-title">Experience</h2>
-            <section id="Experience">
-                <div class="container">
-                    <div class="Experience">
-                        <h3>Curateit</h3>
-                        <p>"This is my first internship, and I am learning how to test websites and find bugs and glitches. I am very excited to gain practical experience and develop skills that will help me in the future."</p>
-                    </div>
-                    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <section class="work section" id="project">
+            <h2 class="section-title">Project</h2>
+            <div class="Project">
+                <div class="icon">
+                    <i class="fas fa-gamepad"></i>
                 </div>
+                <a href="https://harshuu.netlify.app/" target="_blank">Game</a>
+            </div>
+        
+            <div class="Project">
+                <div class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+                <a href="https://harshuu.netlify.app/" target="_blank">eCommerce</a>
+            </div>
+        
+            <div class="Project">
+                <div class="icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <a href="https://harshuu.netlify.app/" target="_blank">xxx</a>
+            </div>
             </section>
         </section>
         <section class="contact section" id="contact">
@@ -207,9 +168,7 @@
         <p class="footer__copy">&#169; Harshal. All rights reserved</p>
     </footer>
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
-    <script>
-
-    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
 </html>
