@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+       <!--------------------------------- HEAD ----------------------------------->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/messagebird/dist/messagebird.js"></script>
+
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-fJdCFuZIiJR0J2R3jRnvDpAwxwEfuLSV3V3t1KEbVsyMn2eOsxwySTHjB2jnKGtMRN8J9xM/z0gr3Cq9dkL3Fg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Harshu</title>
     <link rel="icon" href="Favicon.ico" type="image/x-icon">
 </head>
+
 <body>
+    
+       <!--------------------------------- HEADER ----------------------------------->
     <header class="l-header">
         <nav class="nav bd-grid">
             <div class="nav__menu" id="nav-menu">
@@ -33,11 +35,13 @@
             </div>
         </nav>
     </header>
+       <!--------------------------------- HOME PAGE ----------------------------------->
+       
     <main class="l-main">
         <section class="home bd-grid" id="home">
             <div class="home__data">
                 <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Harshal</span><br>Software Tester</h1>
-                <a href="#" class="button" id="downloadButton">Resume</a>
+                <a href="#" class="button neumorphic" id="downloadButton">Resume</a>
             </div>
             <div class="home__social">
                 <a href="https://www.linkedin.com/in/harshal-panchal-a0b402258/?trk=opento_sprofile_details" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
@@ -56,6 +60,8 @@
                 </svg>
             </div>
         </section>
+        <!--------------------------------- ABOUT PAGE ----------------------------------->
+
         <section class="about section" id="about">
             <h2 class="section-title">About</h2>
             <div class="about__container bd-grid">
@@ -68,6 +74,9 @@
                 </div>
             </div>
         </section>
+
+        <!--------------------------------- SKILL PAGE ----------------------------------->
+
         <section class="skills section" id="skills">
             <h2 class="section-title">Skills</h2>
             <div class="skills__container bd-grid">
@@ -116,30 +125,42 @@
                 </div>
             </div>
         </section>
+
+        <!--------------------------------- PROJECT PAGE ----------------------------------->
+
         <section class="work section" id="project">
-            <h2 class="section-title">Project</h2>
-            <div class="Project">
-                <div class="icon">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <a href="https://harshuu.netlify.app/" target="_blank">Game</a>
-            </div>
-        
-            <div class="Project">
-                <div class="icon">
-                    <i class="fas fa-shopping-cart"></i>
-                </div>
-                <a href="https://harshuu.netlify.app/" target="_blank">eCommerce</a>
-            </div>
-        
-            <div class="Project">
-                <div class="icon">
-                    <i class="fas fa-rocket"></i>
-                </div>
-                <a href="https://harshuu.netlify.app/" target="_blank">Working</a>
-            </div>
-            </section>
+            <h2 class="section-title">Projects</h2>
+            <div class="projects__container bd-grid">
+                <div class="projects__container">
+                    <div class="project__card">
+                      <div class="icon icon-1"><i class="fas fa-laptop-code"></i></div>
+                      <h3><a href="https://chatgpt.com/c/630c1866-6959-4090-bb59-2e4a275d9d52">Project Title 1</a></h3>
+                    </div>
+                    <div class="project__card">
+                      <div class="icon icon-2"><i class="fas fa-mobile-alt"></i></div>
+                      <h3><a href="https://harshuu.netlify.app/">Project Title 2</a></h3>
+                    </div>
+                    <div class="project__card">
+                      <div class="icon icon-3"><i class="fas fa-cogs"></i></div>
+                      <h3><a href="#">Project Title 3</a></h3>
+                    </div>
+                    <div class="project__card">
+                        <div class="icon icon-3"><i class="fas fa-cogs"></i></div>
+                        <h3><a href="#">Project Title 3</a></h3>
+                      </div>
+                      <div class="project__card">
+                        <div class="icon icon-3"><i class="fas fa-cogs"></i></div>
+                        <h3><a href="#">Project Title 3</a></h3>
+                      </div>
+                      <div class="project__card">
+                        <div class="icon icon-3"><i class="fas fa-cogs"></i></div>
+                        <h3><a href="#">Project Title 3</a></h3>
+                      </div>
+                  </div>
         </section>
+
+          <!--------------------------------- CONTACT PAGE ----------------------------------->
+
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
             <div class="contact__container bd-grid">
@@ -155,15 +176,21 @@
             </div>
         </section>
     </main>
+
+    <!--------------------------------- FOOTER PAGE ----------------------------------->
+
     <footer class="footer">
         <div class="footer__social">
             <a href="https://www.facebook.com/param.panchal.104" class="footer__icon"><i class='bx bxl-facebook'></i></a>
             <a href="https://www.instagram.com/_harsh__0095/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
             <a href="https://x.com/Param_0095" class="footer__icon"><i class='bx bxl-twitter'></i></a>
-          </div>
-          
+        </div>
+        
         <p class="footer__copy">&#169; Harshal. All rights reserved</p>
     </footer>
+
+    <!--------------------------------- SCRIPT PAGE ----------------------------------->
+
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
