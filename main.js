@@ -126,3 +126,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const homeImage = document.querySelector('.home__blob-img');
+    const aboutImage = document.querySelector('.about__img img');
+    const skillsImage = document.querySelector('.skills__img');
+    const imagesToProtect = ['pic.png', 'about.jpg', 'Test.jpg']; // List of images to protect
+
+    // Function to check if the image should be protected
+    function shouldProtectImage(imageUrl) {
+        return imagesToProtect.some(protectUrl => imageUrl.includes(protectUrl));
+    }
+
+    // Function to prevent right-click on images
+    function preventRightClick(event) {
+        event.preventDefault();
+    }
+
+    // Function to prevent drag-and-drop of images
+    function preventDragStart(event) {
+        event.preventDefault();
+    }
+
+    // Check and apply protection for home image if necessary
+    if (homeImage && shouldProtectImage(homeImage.getAttribute('href'))) {
+        homeImage.addEventListener('contextmenu', preventRightClick);
+        homeImage.addEventListener('dragstart', preventDragStart);
+    }
+
+    // Check and apply protection for about image if necessary
+    if (aboutImage && shouldProtectImage(aboutImage.getAttribute('src'))) {
+        aboutImage.addEventListener('contextmenu', preventRightClick);
+        aboutImage.addEventListener('dragstart', preventDragStart);
+    }
+
+    // Check and apply protection for skills image if necessary
+    if (skillsImage && shouldProtectImage(skillsImage.getAttribute('src'))) {
+        skillsImage.addEventListener('contextmenu', preventRightClick);
+        skillsImage.addEventListener('dragstart', preventDragStart);
+    }
+});
+
+
+
