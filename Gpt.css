@@ -320,14 +320,20 @@ body.dark-mode {
 
 
 /*...............................FOOTER ...............................*/
+.dark-mode {
+  --navbar-background-color: #000000; /* Example dark mode background color */
+  --footer-text-color: #ffffff; /* Text color for dark mode */
+  --footer-icon-color: #ffffff; /* Icon color for dark mode */
+}
 
 .footer {
-  background-color: rgba(35, 34, 34, 0.8); /* Match with navbar background color */
-  color: #ffffff; /* Specify a contrasting text color */
+  background-color: var(--navbar-background-color);
+  color: var(--footer-text-color);
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
 }
+
 .footer__title,
 .footer__copy {
   font-size: 1.5rem; /* Adjust font size as per your design */
@@ -335,10 +341,9 @@ body.dark-mode {
 
 .footer__icon {
   font-size: 2rem; /* Increase the font size for the icons */
-  color: #ffffff; /* Ensure text color contrasts with background */
+  color: var(--footer-icon-color);
   margin: 0 var(--mb-2);
 }
-
 
 
 /*...............................MEDIA QUERIES...............................*/
