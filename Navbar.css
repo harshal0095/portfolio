@@ -1,0 +1,595 @@
+/*...............................GOOGLE FONTS ...............................*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/*...............................VARIABLES CSS...............................*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+
+  /*...............................Colors...............................*/
+  /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
+  /* HSL color mode */
+  --hue-color: 008080;
+  --first-color: hsl(var(--hue-color), 50%, 50%);
+  --second-color: hsl(var(--hue-color), 50%, 12%);
+
+  /*...............................Font and typography...............................*/
+  --body-font: "Poppins", sans-serif;
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+
+  /*...............................Margins...............................*/
+  --mb-2: 1rem;
+  --mb-4: 2rem;
+  --mb-5: 2.5rem;
+  --mb-6: 3rem;
+
+  /*...............................z-index...............................*/
+  --z-back: -10;
+  --z-fixed: 100;
+
+  /*...............................ight mode colors...............................*/
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #007bff;
+  --navbar-background-color: #f8f9fa;
+  --navbar-text-color: #000000;
+}
+
+body.dark-mode {
+  --background-color: #2c2c2c;
+  --text-color: #ffffff;
+  --primary-color: #1e90ff;
+  --navbar-background-color: #333333;
+  --navbar-text-color: #ffffff;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .875rem;
+  }
+}
+
+/*...............................BASE...............................*/
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*...............................CLASS CSS...............................*/
+.section-title {
+  position: relative;
+  font-size: var(--h2-font-size);
+  color: var(--first-color);
+  margin-top: var(--mb-2);
+  margin-bottom: var(--mb-4);
+  text-align: center;
+}
+.section-title::after {
+  position: absolute;
+  content: "";
+  width: 64px;
+  height: 0.18rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 2rem;
+  background-color: var(--first-color);
+}
+
+
+/*...............................LAYOUT...............................*/
+.bd-grid {
+  max-width: 1024px;
+  display: grid;
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--navbar-background-color);
+  box-shadow: 0 1px 4px rgba(50, 53, 55, 0.71);
+}
+
+/*...............................NAVBAR...............................*/
+.nav {
+  height: var(--header-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: var(--font-semi);
+  background-color: var(--navbar-background-color);
+  
+}
+@media screen and (max-width: 767px) {
+  .nav__menu {
+    position: fixed;
+    top: var(--header-height);
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--second-color);
+    transition: 0.5s;
+  }
+}
+.nav__item {
+  margin-bottom: var(--mb-4);
+}
+.nav__link {
+  position: relative;
+  color: var(--navbar-text-color);
+}
+.nav__link:hover {
+  position: relative;
+}
+.nav__link:hover::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 0.18rem;
+  left: 0;
+  top: 2rem;
+  background-color: var(--first-color);
+}
+.nav__logo {
+  color: var(--navbar-text-color);
+}
+.nav__toggle {
+  color: var(--navbar-text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+/*...............................Show menu...............................*/
+.show {
+  left: 0;
+  text-align: right;
+}
+/*...............................Projects Section............................... */
+/* Default (light mode) styles */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.ChatAi__card h3 a, .wow__card h3 a {
+    color: black; /* h3 color in light mode */
+}
+
+.wow__card {
+    background: var(--background-color);
+    padding: 1rem;
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px #bebebe, -2px -2px 8px #ffffff4f;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.wow img {
+    width: 40%;  /* Change this to the desired width */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+.wow {
+    display: flex;
+    justify-content: center; 
+}
+
+.wow__card:hover {
+    box-shadow: 6px 6px 16px #bebebe, -6px -6px 16px #ffffff91;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+body.dark-mode .ChatAi__card h3 a, body.dark-mode .wow__card h3 a {
+    color: white; /* h3 color in dark mode */
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .icon img {
+    width: 100%;
+    max-width: 200px; /* Adjust this value to increase/decrease image size */
+ 
+}
+
+.ChatAi__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  gap: 2rem;
+  padding: 0rem;
+}
+
+.ChatAi__card {
+  background: var(--background-color);
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px #bebebe, -2px -2px 8px #ffffff4f;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.ChatAi__card:hover {
+
+  box-shadow: 6px 6px 16px #bebebe, -6px -6px 16px #ffffff91;
+}
+
+
+/*............................... Light Mode ...............................*/
+
+
+/* Dark Mode */
+body.dark-mode {
+  --background-color: #2c2c2c;
+  --text-color: #ffffff;
+  --primary-color: #1e90ff;
+}
+
+/* Icon Colors for Light Mode */
+.light-mode .icon-1,
+.light-mode .icon-2,
+.light-mode .icon-3 {
+  color: #000000;
+}
+
+/* Icon Colors for Dark Mode */
+.dark-mode .icon-1,
+.dark-mode .icon-2,
+.dark-mode .icon-3 {
+  color: #ffffff;
+}
+
+/* Title Colors for Light Mode */
+.light-mode .project__card h3 a {
+  color: #000000;
+}
+
+/* Title Colors for Dark Mode */
+.dark-mode .project__card h3 a {
+  color: #ffffff;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .projects__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .projects__container {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .projects__container {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
+  }
+}
+
+
+
+/*...............................FOOTER ...............................*/
+.dark-mode {
+  --navbar-background-color: #000000; /* Example dark mode background color */
+  --footer-text-color: #ffffff; /* Text color for dark mode */
+  --footer-icon-color: #ffffff; /* Icon color for dark mode */
+}
+
+.footer {
+  background-color: var(--navbar-background-color);
+  color: var(--footer-text-color);
+  text-align: center;
+  font-weight: var(--font-semi);
+  padding: 2rem 0;
+}
+
+.footer__title,
+.footer__copy {
+  font-size: 1.5rem; /* Adjust font size as per your design */
+}
+
+.footer__icon {
+  font-size: 2rem; /* Increase the font size for the icons */
+  color: var(--footer-icon-color);
+  margin: 0 var(--mb-2);
+}
+
+
+/*...............................MEDIA QUERIES...............................*/
+@media screen and (max-width: 320px) {
+  .home {
+    row-gap: 2rem;
+  }
+  .home__img {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 576px) {
+  .home {
+    padding: 4rem 0 2rem;
+  }
+  .home__social {
+    padding-top: 0;
+    padding-bottom: 2.5rem;
+    flex-direction: row;
+    align-self: flex-end;
+  }
+  .home__social-icon {
+    margin-bottom: 0;
+    margin-right: var(--mb-4);
+  }
+  .home__img {
+    width: 300px;
+    bottom: 25%;
+  }
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: initial;
+  }
+  .skills__container {
+    grid-template-columns: 0.7fr;
+    justify-content: center;
+    column-gap: 1rem;
+  }
+  .work__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    padding-top: 2rem;
+  }
+  .contact__form {
+    width: 360px;
+    padding-top: 2rem;
+  }
+  .contact__container {
+    justify-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  body {
+    margin: 0;
+  }
+  .section {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+  .section-title {
+    margin-bottom: var(--mb-6);
+  }
+  .section-title::after {
+    width: 80px;
+    top: 3rem;
+  }
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+  .nav__list {
+    display: flex;
+    padding-top: 0;
+  }
+  .nav__item {
+    margin-left: var(--mb-6);
+    margin-bottom: 0;
+  }
+  .nav__toggle {
+    display: none;
+  }
+  .nav__link {
+    color: var(--navbar-text-color);
+  }
+  .home {
+    padding: 8rem 0 2rem;
+  }
+  .home__img {
+    width: 400px;
+    bottom: 10%;
+  }
+  .about__container {
+    padding-top: 2rem;
+  }
+  .about__img img {
+    width: 300px;
+  }
+  .skills__container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    align-items: center;
+    text-align: initial;
+  }
+  .work__container {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bd-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home {
+    padding: 10rem 0 2rem;
+  }
+  .home__img {
+    width: 450px;
+  }
+}
+
+
+
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #007bff;
+  --navbar-background-color: #f8f9fa;
+  --navbar-text-color: #000000;
+}
+
+
+
+/* Dark Mode Toggle */
+.theme-toggle {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color); /* Use CSS variable */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 2px 2px 20px rgba(30, 30, 30, 0.5),  -2px -2px 20px rgba(255, 255, 255, 0.273); /* Initial shadow */
+}
+
+.theme-toggle i {
+  font-size: 20px;
+  color: var(--navbar-text-color); /* Use CSS variable */
+}
+
+.theme-toggle:hover {
+  background: #33333342; /* Dark background color on hover */
+}
+
+.theme-toggle.light-mode {
+  background: #f8f9fa; /* Light background color */
+  box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.5), -2px -2px 20px rgba(53, 52, 52, 0.564); /* Light shadow */
+}
+
+.theme-toggle.light-mode i {
+  color: #000000; /* Black icon color for light mode */
+}
+
+.theme-toggle.dark-mode {
+  background: #000000; /* Dark background color */
+  box-shadow: 2px 2px 20px rgba(49, 47, 47, 0.908), -2px -2px 20px rgb(59, 55, 55); /* Darker shadow */
+}
+
+.theme-toggle.dark-mode i {
+  color: #ffffff; /* White icon color for dark mode */
+}
+
+
+
+/* Default (light mode) styles */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.ChatAi__card h3 a {
+    color: black; /* h3 links color in light mode */
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color:  #2c2c2c;
+    color: #ffffff;
+}
+
+body.dark-mode .ChatAi__card h3 a {
+    color: white; /* h3 links color in dark mode */
+}
+
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dropdown {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.section-title {
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 60%; /* Position below the section title */
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.dropdown-menu a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
