@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    transition: background 0.3s ease;
+  }
+  
+  .theme-switcher {
+    margin: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+  }
+  
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 25px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 21px;
+    width: 21px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #66bb6a;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(24px);
+  }
+  
+  body.light {
+    background: #ecf0f3;
+  }
+  
+  body.dark {
+    background: #2e2e2e;
+  }
+  
+  .sidebar {
+    width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  body.light .sidebar {
+    background: #ecf0f3;
+    box-shadow: 5px 5px 15px #babecc, -5px -5px 15px #ffffff;
+  }
+  
+  body.dark .sidebar {
+    background: #3a3a3a;
+    box-shadow: 5px 5px 15px #1e1e1e, -5px -5px 15px #4a4a4a;
+  }
+  
+  .sidebar-item {
+    padding: 15px 20px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+  }
+  
+  body.light .sidebar-item {
+    background: #ecf0f3;
+    box-shadow: inset 5px 5px 10px #babecc, inset -5px -5px 10px #ffffff;
+  }
+  
+  body.dark .sidebar-item {
+    background: #3a3a3a;
+    box-shadow: inset 5px 5px 10px #1e1e1e, inset -5px -5px 10px #4a4a4a;
+  }
+  
+  .sidebar-item:hover {
+    box-shadow: 5px 5px 15px #babecc, -5px -5px 15px #ffffff;
+  }
+  
+  body.dark .sidebar-item:hover {
+    box-shadow: 5px 5px 15px #1e1e1e, -5px -5px 15px #4a4a4a;
+  }
+  
+  .sidebar-item.active {
+    box-shadow: 5px 5px 15px #babecc, -5px -5px 15px #ffffff;
+  }
+  
+  body.dark .sidebar-item.active {
+    box-shadow: 5px 5px 15px #1e1e1e, -5px -5px 15px #4a4a4a;
+    background: #323232;
+  }
+  
