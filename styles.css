@@ -769,3 +769,94 @@ body {
 .theme-toggle.dark-mode i {
   color: #ffffff; /* White icon color for dark mode */
 }
+
+
+/* Scroll bar styling for light mode */
+.light-mode::-webkit-scrollbar {
+  width: 10px;
+}
+
+.light-mode::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light grey */
+}
+
+.light-mode::-webkit-scrollbar-thumb {
+  background: #d3d3d3; /* Slightly darker grey for the thumb */
+}
+
+.light-mode::-webkit-scrollbar-thumb:hover {
+  background: #b0b0b0; /* Darker grey when hovering over the thumb */
+}
+
+/* Scroll bar styling for dark mode */
+.dark-mode::-webkit-scrollbar {
+  width: 10px;
+}
+
+.dark-mode::-webkit-scrollbar-track {
+  background: #333; /* Dark grey */
+}
+
+.dark-mode::-webkit-scrollbar-thumb {
+  background: #555; /* Slightly lighter grey for the thumb */
+}
+
+.dark-mode::-webkit-scrollbar-thumb:hover {
+  background: #777; /* Even lighter grey when hovering over the thumb */
+}
+
+.icon {
+  display: flex;
+
+  justify-content: center;
+
+}
+
+.icon img {
+  width: 20%;
+  height: auto;
+}
+
+
+
+/* Button Styles */
+.button-container {
+  display: flex;
+  
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.button {
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.neumorphic {
+  color: #333;
+  background: #e0e0e0;
+  box-shadow: 9px 9px 16px #bebebe, -9px -9px 16px #ffffff;
+}
+
+.neumorphic:hover {
+  box-shadow: inset 9px 9px 16px #bebebe, inset -9px -9px 16px #ffffff;
+  color: #4CAF50;
+}
+
+.neumorphic:active {
+  box-shadow: inset 2px 2px 4px #bebebe, inset -2px -2px 4px #ffffff;
+  color: #333;
+}
+
+/* Download Button Specific Styles */
+.download {
+  background: #4CAF50;
+  color: #fff;
+}
+
+.download:hover {
+  color: #fff;
+}
