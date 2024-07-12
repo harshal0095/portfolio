@@ -854,3 +854,30 @@ body {
 .download:hover {
   color: #fff;
 }
+
+/* Neumorphic Button Style */
+.neumorphic {
+  background: #e0e0e0;
+  border-radius: 12px;
+  box-shadow: inset 2px 2px 4px #bebebe, inset -2px -2px 4px #ffffff;
+  border: none;
+  padding: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.neumorphic:active {
+  box-shadow: inset 2px 2px 4px #bebebe, inset -2px -2px 4px #ffffff;
+}
+
+.neumorphic i {
+  font-size: 24px;
+  color: #666;
+}
+
+
+.theme-toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
