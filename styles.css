@@ -140,6 +140,7 @@ img {
 .nav {
   height: var(--header-height);
   display: flex;
+  border-radius: 1000px; /* Rounded corners */
   justify-content: space-between;
   align-items: center;
   font-weight: var(--font-semi);
@@ -812,15 +813,6 @@ body {
 
 }
 
-
-/* Button Styles */
-.button-container {
-  display: flex;
-  
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
 .button {
   padding: 1rem 2rem;
   font-size: 1.25rem;
@@ -879,5 +871,34 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+/* Navbar animation */
+@keyframes springIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(10%);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.l-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  background-color: var(--navbar-background-color);
+  box-shadow: 0 1px 4px rgba(50, 53, 55, 0.71);
+  animation: springIn 1s ease-out;
 }
 
