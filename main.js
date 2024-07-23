@@ -170,8 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Contact form api settings
-
+// Contact form API settings
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -186,8 +185,6 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     formData.append('name', name);
     formData.append('email', email);
     formData.append('message', message);
-
-  
 
     // Send email using EmailJS (excluding file attachments)
     fetch('https://api.emailjs.com/api/v1.0/email/send', {
@@ -209,16 +206,13 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     })
     .then(response => response.text()) // Use text() if the response is not JSON
     .then(data => {
-        console.log('Success:', data);
         alert('Your message has been sent successfully!');
+        window.location.reload(); // Refresh the page
     })
     .catch(error => {
-        console.error('Error:', error);
         alert('There was an error sending your message. Please try again later.');
+        window.location.reload(); // Refresh the page
     });
 
     // Handle file uploads separately if needed
-    // For example, upload files to a file storage service or your server
 });
-
-
