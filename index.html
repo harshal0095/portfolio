@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-       <!--------------------------------- HEAD ----------------------------------->
+<!--------------------------------- HEAD ----------------------------------->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,25 +9,49 @@
 
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+        integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 
     <title>Harshu</title>
     <link rel="icon" href="Favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    
-       <!--------------------------------- HEADER ----------------------------------->
+
+    <!--------------------------------- HEADER ----------------------------------->
     <header class="l-header">
         <nav class="nav bd-grid">
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#home" class="nav__link active-link">Home</a></li>
-                    <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                    <li class="nav__item"><a href="#project" class="nav__link">Project</a></li>
-                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="fas fa-user"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="fas fa-cogs"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#project" class="nav__link">
+                            <i class="fas fa-project-diagram"></i> Project
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
                 </ul>
             </div>
+            
             <div class="nav__toggle" id="nav-toggle">
                 <i class='bx bx-menu'></i>
             </div>
@@ -34,34 +59,48 @@
                 <div class="theme-toggle" id="theme-toggle">
                     <i class='bx bx-moon' id="theme-icon"></i>
                 </div>
-               
+
             </div>
-        
+
         </nav>
     </header>
-       <!--------------------------------- HOME PAGE ----------------------------------->
-       
+    <!--------------------------------- HOME PAGE ----------------------------------->
+
     <main class="l-main">
         <section class="home bd-grid" id="home">
             <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Harshal</span><br>Software Tester</h1>
+                <h1 class="home__title">Hi,<br>I'm <span class="home__title-color">Harshal</span><br>WebApp Tester
+                </h1>
                 <a href="Resume.pdf" class="button neumorphic" id="downloadButton">Resume</a>
             </div>
-            
-       
-            <div class="home__social">
-                <a href="https://www.linkedin.com/in/harshal-panchal-a0b402258/?trk=opento_sprofile_details" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://www.instagram.com/_harsh__0095/" class="home__social-icon"><i class='bx bxl-instagram'></i></a>
-                <a href="https://x.com/Param_0095" class="home__social-icon"><i class='bx bxl-twitter'></i></a>
-            </div>
+
+
+            <section>
+                <ul class="icon-list">
+                    <li class="icon-item">
+                        <a href="https://www.linkedin.com/in/harshal-panchal-a0b402258/" class="icon-link linkedin"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="https://www.instagram.com/_harsh__0095/" class="icon-link instagram"><i
+                                class="fab fa-instagram"></i></a>
+                    </li>
+                    <li class="icon-item">
+                        <a href="https://x.com/Param_0095" class="icon-link twitter"><i
+                                class="fab fa-twitter"></i></a>
+                    </li>
+                </ul>
+            </section>
+
             <div class="home__img">
-                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <svg class="home__blob" viewBox="0 0 479 467" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
                     <mask id="mask0" mask-type="alpha">
-                        <circle cx="239.5" cy="233.5" r="200" fill="teal"/>
+                        <circle cx="239.5" cy="233.5" r="200" fill="teal" />
                     </mask>
                     <g mask="url(#mask0)">
-                        <circle cx="239.5" cy="233.5" r="200" fill="teal"/>
-                        <image class="home__blob-img" x="39.5" y="33.5" width="400" height="400" href="pic.png"/>
+                        <circle cx="239.5" cy="233.5" r="200" fill="teal" />
+                        <image class="home__blob-img" x="39.5" y="33.5" width="400" height="400" href="pic.png" />
                     </g>
                 </svg>
             </div>
@@ -76,7 +115,14 @@
                 </div>
                 <div>
                     <h2 class="about__subtitle">I'm Harshal</h2>
-                    <p class="about__text">a software tester, plays a crucial role in ensuring the quality and functionality of software applications. They conduct various tests to identify bugs, defects, and issues, collaborating closely with developers and stakeholders to resolve them. Key responsibilities include executing test cases, documenting findings, and ensuring that software meets specified requirements. Skills needed include attention to detail, analytical thinking, and proficiency in testing methodologies and tools. Overall, Harshal and other software testers are integral to the software development process, ensuring high-quality software products are delivered to users.</p>
+                    <p class="about__text">a software tester, plays a crucial role in ensuring the quality and
+                        functionality of software applications. They conduct various tests to identify bugs, defects,
+                        and issues, collaborating closely with developers and stakeholders to resolve them. Key
+                        responsibilities include executing test cases, documenting findings, and ensuring that software
+                        meets specified requirements. Skills needed include attention to detail, analytical thinking,
+                        and proficiency in testing methodologies and tools. Overall, Harshal and other software testers
+                        are integral to the software development process, ensuring high-quality software products are
+                        delivered to users.</p>
                 </div>
             </div>
         </section>
@@ -88,7 +134,12 @@
             <div class="skills__container bd-grid">
                 <div>
                     <h2 class="skills__subtitle">Professional Skills</h2>
-                    <p class="skills__text">a skilled software tester specializing in functional, regression, and integration testing. He excels in analyzing complex software systems, ensuring thorough testing, meticulous bug reporting, and effective collaboration with developers and stakeholders. Harshal writes clear test cases, stays updated with new technologies, and utilizes automation to enhance testing efficiency and software quality.</p>
+                    <p class="skills__text">a skilled software tester specializing in functional, regression, and
+                        integration testing. He excels in analyzing complex software systems, ensuring thorough testing,
+                        meticulous bug reporting, and effective collaboration with developers and stakeholders. Harshal
+                        writes clear test cases, stays updated with new technologies, and utilizes automation to enhance
+                        testing efficiency and software quality.</p>
+                    
                     <div class="skills__data">
                         <div class="skills__names">
                             <span class="skills__name">Manual Testing</span>
@@ -139,61 +190,83 @@
             <div class="projects__container bd-grid">
                 <div class="projects__container">
                     <div class="project__card">
-                      <div class="icon icon-1"><i class="fas fa-laptop-code"></i></div>
-                      <h3><a href="Gpt.html">Chat Ai</a></h3>
+                        <div class="icon icon-1"><i class="fas fa-laptop-code"></i></div>
+                        <h3><a href="Gpt.html">Chat Ai</a></h3>
                     </div>
                     <div class="project__card">
-                      <div class="icon icon-2"><i class="fas fa-code"></i></div>
-                      <h3><a href="Navbar.html">Navbar Code</a></h3>
-                    </div>
-                    <div class="project__card">
-                      <div class="icon icon-3"><i class="fas fa-cogs"></i></div>
-                      <h3><a href="#">Project Title 3</a></h3>
+                        <div class="icon icon-2"><i class="fas fa-code"></i></div>
+                        <h3><a href="Navbar.html">Navbar Code</a></h3>
                     </div>
                     <div class="project__card">
                         <div class="icon icon-3"><i class="fas fa-cogs"></i></div>
                         <h3><a href="#">Project Title 3</a></h3>
-                      </div>
-                      <div class="project__card">
+                    </div>
+                    <div class="project__card">
                         <div class="icon icon-3"><i class="fas fa-cogs"></i></div>
                         <h3><a href="#">Project Title 3</a></h3>
-                      </div>
-                      <div class="project__card">
+                    </div>
+                    <div class="project__card">
                         <div class="icon icon-3"><i class="fas fa-cogs"></i></div>
                         <h3><a href="#">Project Title 3</a></h3>
-                      </div>
-                  </div>
+                    </div>
+                    <div class="project__card">
+                        <div class="icon icon-3"><i class="fas fa-cogs"></i></div>
+                        <h3><a href="#">Project Title 3</a></h3>
+                    </div>
+                </div>
         </section>
 
-          <!--------------------------------- CONTACT PAGE ----------------------------------->
+        <!--------------------------------- CONTACT PAGE ----------------------------------->
 
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
-            <div class="contact__container bd-grid">
-                <a href="https://wa.me/+917862813677" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/800px-WhatsApp.svg.png" alt="WhatsApp">
-                </a>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=harshalpanchal4517@gmail.com" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail">
-                </a>
-                <a href="https://www.linkedin.com/in/harshal-panchal-a0b402258/message" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn">
-                </a>
-            </div>
+            <form class="contact__form" id="contactForm" enctype="multipart/form-data">
+                <div class="contact__field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="contact__field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="contact__field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+  
+                <button type="submit" class="contact__button">Send Message</button>
+            </form>
         </section>
-    </main>
+        
+        
+   
 
     <!--------------------------------- FOOTER PAGE ----------------------------------->
 
     <footer class="footer">
-        <div class="footer__social">
-            <a href="https://www.facebook.com/param.panchal.104" class="footer__icon"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/_harsh__0095/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
-            <a href="https://x.com/Param_0095" class="footer__icon"><i class='bx bxl-twitter'></i></a>
-        </div>
-        
-        <p class="footer__copy">&#169; Harshal. All rights reserved</p>
+        <section>
+            <ul class="icon-list">
+                <li class="icon-item">
+                    <a href="https://x.com/Param_0095" class="icon-link twitter"><i
+                            class="fab fa-twitter"></i></a>
+                </li>
+                <li class="icon-item">
+                    <a href="https://www.facebook.com/param.panchal.104" class="icon-link facebook"><i
+                            class="fab fa-facebook-f"></i></a>
+                </li>
+
+                <li class="icon-item">
+                    <a href="https://www.instagram.com/_harsh__0095/" class="icon-link instagram"><i
+                            class="fab fa-instagram"></i></a>
+                </li>
+                <li class="icon-item">
+                    <a href="https://www.linkedin.com/in/harshal-panchal-a0b402258/" class="icon-link linkedin"><i
+                            class="fab fa-linkedin-in"></i></a>
+                </li>
+            </ul>
+        </section>
     </footer>
+
 
     <!--------------------------------- SCRIPT PAGE ----------------------------------->
 
@@ -201,4 +274,5 @@
     <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
+
 </html>
