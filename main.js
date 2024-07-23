@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-// Contact form api settings 
+// Contact form api settings
 
 document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
@@ -187,10 +187,7 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     formData.append('email', email);
     formData.append('message', message);
 
-    // Append files
-    for (let i = 0; i < fileInput.files.length; i++) {
-        formData.append('attachments[]', fileInput.files[i]);
-    }
+  
 
     // Send email using EmailJS (excluding file attachments)
     fetch('https://api.emailjs.com/api/v1.0/email/send', {
