@@ -168,3 +168,73 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+// Contact form api settings 
+
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    // Get form values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+    const fileInput = document.getElementById('attachment');
+
+    // Collect form data
+    const formData = new FormData();
+    formData.append('name', name);
+    formData.append('email', email);
+    formData.append('message', message);
+
+    // Upload files and get URLs
+    const fileUploadPromises = [];
+    for (let i = 0; i < fileInput.files.length; i++) {
+        const file = fileInput.files[i];
+        fileUploadPromises.push(uploadFile(file));
+    }
+
+    Promise.all(fileUploadPromises)
+        .then(fileUrls => {
+            // Send email with file URLs
+            return fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer zph9IQOVXV4TObPZR` // Replace with your public API key
+                },
+                body: JSON.stringify({
+                    service_id: 'service_pkb5ttr', // Replace with your service ID
+                    template_id: 'template_ppqw5cu', // Replace with your template ID
+                    user_id: 'zph9IQOVXV4TObPZR', // Replace with your public API key
+                    template_params: {
+                        from_name: name,
+                        from_email: email,
+                        message: message,
+                        file_urls: fileUrls.join(', ') // Join file URLs into a single string
+                    }
+                })
+            });
+        })
+        .then(response => response.text()) // Use text() if the response is not JSON
+        .then(data => {
+            console.log('Success:', data);
+            alert('Your message has been sent successfully!');
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('There was an error sending your message. Please try again later.');
+        });
+});
+
+// Mock function to upload a file
+function uploadFile(file) {
+    return new Promise((resolve, reject) => {
+        // Replace with actual file upload logic
+        // This is just a placeholder
+        const fileUrl = 'https://example.com/' + file.name;
+        resolve(fileUrl);
+    });
+}
+
+
