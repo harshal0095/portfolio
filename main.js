@@ -187,42 +187,41 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     formData.append('email', email);
     formData.append('message', message);
 
-    // Upload files and get URLs
-    const fileUploadPromises = [];
+    // Append files
     for (let i = 0; i < fileInput.files.length; i++) {
-        const file = fileInput.files[i];
-        fileUploadPromises.push(uploadFile(file));
+        formData.append('attachments[]', fileInput.files[i]);
     }
 
-    Promise.all(fileUploadPromises)
-        .then(fileUrls => {
-            // Send email with file URLs
-            return fetch('https://api.emailjs.com/api/v1.0/email/send', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer zph9IQOVXV4TObPZR` // Replace with your public API key
-                },
-                body: JSON.stringify({
-                    service_id: 'service_pkb5ttr', // Replace with your service ID
-                    template_id: 'template_ppqw5cu', // Replace with your template ID
-                    user_id: 'zph9IQOVXV4TObPZR', // Replace with your public API key
-                    template_params: {
-                        from_name: name,
-                        from_email: email,
-                        message: message,
-                        file_urls: fileUrls.join(', ') // Join file URLs into a single string
-                    }
-                })
-            });
+    // Send email using EmailJS (excluding file attachments)
+    fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer zph9IQOVXV4TObPZR` // Replace with your public API key
+        },
+        body: JSON.stringify({
+            service_id: 'service_pkb5ttr', // Replace with your service ID
+            template_id: 'template_ppqw5cu', // Replace with your template ID
+            user_id: 'zph9IQOVXV4TObPZR', // Replace with your public API key
+            template_params: {
+                from_name: name,
+                from_email: email,
+                message: message
+            }
         })
-        .then(response => response.text()) // Use text() if the response is not JSON
-        .then(data => {
-            console.log('Success:', data);
-            alert('Your message has been sent successfully!');
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('There was an error sending your message. Please try again later.');
-        });
+    })
+    .then(response => response.text()) // Use text() if the response is not JSON
+    .then(data => {
+        console.log('Success:', data);
+        alert('Your message has been sent successfully!');
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error sending your message. Please try again later.');
+    });
+
+    // Handle file uploads separately if needed
+    // For example, upload files to a file storage service or your server
 });
+
+
