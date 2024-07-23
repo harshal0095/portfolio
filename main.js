@@ -226,15 +226,3 @@ document.getElementById('contactForm').addEventListener('submit', function (even
             alert('There was an error sending your message. Please try again later.');
         });
 });
-
-// Mock function to upload a file
-function uploadFile(file) {
-    return new Promise((resolve, reject) => {
-        // Replace with actual file upload logic
-        // This is just a placeholder
-        const fileUrl = 'https://example.com/' + file.name;
-        resolve(fileUrl);
-    });
-}
-
-
