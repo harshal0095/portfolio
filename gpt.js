@@ -76,49 +76,6 @@ document.getElementById('downloadButton').addEventListener('click', function() {
     document.body.appendChild(overlay);
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const themeToggle = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    
-    // Check if a theme is already saved in localStorage
-    const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-
-    if (currentTheme) {
-        document.body.classList.add(currentTheme);
-        if (currentTheme === 'dark-mode') {
-            themeIcon.classList.replace('bx-moon', 'bx-sun');
-        } else {
-            themeIcon.classList.replace('bx-sun', 'bx-moon');
-        }
-    }
-    
-    themeToggle.addEventListener('click', () => {
-        if (document.body.classList.contains('dark-mode')) {
-            document.body.classList.replace('dark-mode', 'light-mode');
-            themeIcon.classList.replace('bx-sun', 'bx-moon');
-            localStorage.setItem('theme', 'light-mode');
-        } else {
-            document.body.classList.replace('light-mode', 'dark-mode');
-            themeIcon.classList.replace('bx-moon', 'bx-sun');
-            localStorage.setItem('theme', 'dark-mode');
-        }
-    });
-});
-
-
-function filterTools() {
-    const searchInput = document.getElementById('searchBar').value.toLowerCase();
-    const cards = document.querySelectorAll('.ChatAi__card, .wow__card');
-
-    cards.forEach(card => {
-        const toolName = card.getAttribute('data-tool').toLowerCase();
-        if (toolName.includes(searchInput)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
 
 
 
