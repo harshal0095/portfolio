@@ -216,3 +216,42 @@ document.getElementById('contactForm').addEventListener('submit', function (even
 
     // Handle file uploads separately if needed
 });
+
+  // Handle file uploads separately if needed
+  
+document.addEventListener('DOMContentLoaded', function() {
+    const projectsToggle = document.getElementById('projects-toggle');
+    const experienceToggle = document.getElementById('experience-toggle');
+    const projectsContent = document.getElementById('projects-content');
+    const experienceContent = document.getElementById('experience-content');
+
+    // Check local storage and set the active section
+    const activeSection = localStorage.getItem('activeSection');
+    if (activeSection === 'experience') {
+        experienceToggle.classList.add('active');
+        projectsToggle.classList.remove('active');
+        experienceContent.classList.add('active');
+        projectsContent.classList.remove('active');
+    } else {
+        projectsToggle.classList.add('active');
+        experienceToggle.classList.remove('active');
+        projectsContent.classList.add('active');
+        experienceContent.classList.remove('active');
+    }
+
+    projectsToggle.addEventListener('click', function() {
+        projectsToggle.classList.add('active');
+        experienceToggle.classList.remove('active');
+        projectsContent.classList.add('active');
+        experienceContent.classList.remove('active');
+        localStorage.setItem('activeSection', 'projects');
+    });
+
+    experienceToggle.addEventListener('click', function() {
+        experienceToggle.classList.add('active');
+        projectsToggle.classList.remove('active');
+        experienceContent.classList.add('active');
+        projectsContent.classList.remove('active');
+        localStorage.setItem('activeSection', 'experience');
+    });
+});
