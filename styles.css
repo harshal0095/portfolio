@@ -148,37 +148,6 @@ img {
 }
 
 /* Navbar animation */
-@keyframes springIn {
-  0% {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(10%);
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(-5%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-@media screen and (max-width: 767px) {
-  .nav__menu {
-    position: fixed;
-    top: var(--header-height);
-    right: -100%;
-    width: 80%;
-    height: 100%;
-    padding: 2rem;
-    background-color: var(--second-color);
-    transition: 0.5s;
-  }
-}
-.nav__item {
-  margin-bottom: var(--mb-4);
-}
 .nav__link {
   position: relative;
   color: var(--navbar-text-color);
@@ -195,18 +164,76 @@ img {
   top: 2rem;
   background-color: var(--first-color);
 }
-.nav__logo {
-  color: var(--navbar-text-color);
-}
-.nav__toggle {
-  color: var(--navbar-text-color);
-  font-size: 1.5rem;
-  cursor: pointer;
+
+/* Navbar animation */
+@keyframes springIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(10%);
+    opacity: 1;
+  }
+  70% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
-/*............ Show menu ............*/
-.show {
-  right: 0;
+/* Bottom Navigation App */
+
+.bottom-nav {
+  display: none; /* Hide by default */
+}
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  .nav {
+      display: none; /* Hide desktop navigation on mobile */
+  }
+
+  .bottom-nav {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff; /* Change as needed */
+      border-top: 1px solid #ddd; /* Optional border */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Optional shadow */
+      z-index: 1000;
+  }
+
+  .bottom-nav__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+  }
+
+  .bottom-nav__item {
+      text-align: center;
+  }
+
+  .bottom-nav__link {
+      text-decoration: none;
+      color: #000000dd; /* Default color */
+      font-size: 20px; /* Adjust size as needed */
+  }
+
+  .bottom-nav__link i {
+      display: block;
+      margin-bottom: 5px;
+  }
 }
 
 /*............ Dark Mode Toggle icon css ............*/
@@ -620,22 +647,59 @@ body.dark-mode .button:hover {
 
 /*...............................Projects Section............................... */
 
+/* Toggle Menu */
+.toggle-menu {
+  display: flex;
+  justify-content: center;
 
-.projects__container {
+  margin-left: 15% ;
+  margin-right: 15%;
+  padding: 1rem 0rem; /* Reduced horizontal padding to bring the border closer on the sides */
+  border: 2px solid rgb(204, 204, 214); /* Border */
+  border-radius: 25px; /* Rounded corners */
+}
+
+.section-title {
+  cursor: pointer;
+  margin: 0 0.5rem; /* Adjusted margin for spacing between titles */
+  padding: 0.5rem 1rem; /* Adjusted padding for titles */
+  font-size: 1.5rem;
+  transition: 0.3s;
+}
+
+.section-title.active {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px #bebebe, -2px -2px 8px #ffffff4f;
+}
+
+/* Content Container */
+.content-container {
+  padding: 2rem 0;
+}
+
+.content-container > div {
+  display: none;
+}
+
+.content-container > div.active {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
   gap: 2rem;
-  padding: 2rem;
+  padding: 1rem;
+  
 }
+/* project__card */
 
 .project__card {
   background: var(--background-color);
   padding: 1rem;
   border-radius: 20px;
   box-shadow: 2px 2px 8px #bebebe, -2px -2px 8px #ffffff4f;
-  box-shadow:  2px 2px 16px rgba(0, 0, 0, 0.781); /* Optional: Add shadow for a subtle effect */
   text-align: center;
   transition: 0.3s;
+  
 }
 
 .project__card:hover {
@@ -659,6 +723,43 @@ body.dark-mode .button:hover {
   color: var(--primary-color);
 }
 
+/* experience__card */
+
+
+.experience__card {
+  background: var(--background-color);
+  padding: 1rem;
+  border-radius: 20px;
+  box-shadow: 2px 2px 8px #bebebe, -2px -2px 8px #ffffff4f;
+  text-align: center;
+  transition: 0.3s;
+  
+}
+
+.experience__card:hover {
+  box-shadow: 6px 6px 16px #bebebe, -6px -6px 16px #ffffff4f;
+}
+
+.experience__card .icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text-color);
+}
+
+.experience__card a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.2rem;
+
+}
+
+.highlighted-text {
+  color: #7d7d7d; /* Text color */
+  font-size: 1.2rem; /* Font size */
+  line-height: 1.5; /* Line height for better readability */
+}
+
+
 /* Icon Colors for Dark Mode */
 .dark-mode .icon-1,
 .dark-mode .icon-2,
@@ -673,22 +774,23 @@ body.dark-mode .button:hover {
 
 /* Responsive adjustments */
 @media only screen and (max-width: 768px) {
-  .projects__container {
+  .content-container > div.active {
     grid-template-columns: 1fr;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .projects__container {
+  .content-container > div.active {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
 
 @media only screen and (min-width: 1025px) {
-  .projects__container {
+  .content-container > div.active {
     grid-template-columns: repeat(auto-fit, minmax(300px, 3fr));
   }
 }
+
 
 
 /*...............................CONTACT ...............................*/
@@ -739,8 +841,9 @@ body.dark-mode .button:hover {
 
 .contact__field input,
 .contact__field textarea {
-  width: auto;
+  width: 300px;
   padding: 20px;
+
   border-radius: 10px;
   border: none;
   background: transparent;
@@ -757,12 +860,19 @@ body.dark-mode .button:hover {
   box-shadow: inset 2px 2px 5px var(--shadow-dark),inset -2px -2px 5px var(--shadow-light);
 }
 
+:root {
+
+  --shadow-dark: #a3b1c6;
+  --shadow-light: #ffffff;
+  --button-hover-color: #9fbcea;
+}
+
 .contact__button {
-  width: 100%;
+  width: 50%;
   padding: 15px;
   border: none;
   border-radius: 10px;
-  background:transparent;
+  background: var(--background-color);
   color: #000000;
   font-size: 1rem;
   cursor: pointer;
@@ -774,12 +884,15 @@ body.dark-mode .button:hover {
 
 .contact__button:hover {
   background: var(--button-hover-color);
+  box-shadow: 5px 5px 10px var(--shadow-dark, rgba(163, 177, 198, 0.6)),
+              -5px -5px 10px var(--shadow-light, rgba(255, 255, 255, 0.5));
 }
 
 .contact__button:active {
   box-shadow: inset 5px 5px 10px var(--shadow-dark),
               inset -5px -5px 10px var(--shadow-light);
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
