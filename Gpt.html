@@ -18,41 +18,81 @@
 <body>
     
        <!--------------------------------- HEADER ----------------------------------->
-    <header class="l-header">
+       <header class="l-header">
         <nav class="nav bd-grid">
             <div class="nav__menu" id="nav-menu">
                 <ul class="nav__list">
-
-                    <li class="nav__item"><a href="index.html" class="nav__link active-link">Home</a></li>
-
-                    <ul class="nav__list">
-                        <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
-                    </ul>
-
-                    <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html#skills" class="nav__link">Skills</a></li>
-                    </ul>
-
-                    <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html#project" class="nav__link">Project</a></li>
-                    </ul>
-
-                    <ul class="nav__list">
-                    <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
-                    </ul>
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link active-link">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#about" class="nav__link">
+                            <i class="fas fa-user"></i> About
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#skills" class="nav__link">
+                            <i class="fas fa-cogs"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#project" class="nav__link">
+                            <i class="fas fa-project-diagram"></i> Project
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="index.html#contact" class="nav__link">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
                 </ul>
             </div>
-
+            
             <div class="nav__toggle" id="nav-toggle">
                 <i class='bx bx-menu'></i>
             </div>
+            <div class="theme-toggle-container">
+                <div class="theme-toggle" id="theme-toggle">
+                    <i class='bx bx-moon' id="theme-icon"></i>
+                </div>
 
-            <div class="theme-toggle" id="theme-toggle">
-                <i class='bx bx-moon' id="theme-icon"></i>
             </div>
+
         </nav>
-        
     </header>
+
+        <!--------------------------------- BOTTOM NAVIGATION (Mobile only) ----------------------------------->
+    <nav class="bottom-nav">
+        <ul class="bottom-nav__list">
+            <li class="bottom-nav__item">
+                <a href="index.html" class="bottom-nav__link active-link">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li class="bottom-nav__item">
+                <a href="index.html#about" class="bottom-nav__link">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+            <li class="bottom-nav__item">
+                <a href="index.html#skills" class="bottom-nav__link">
+                    <i class="fas fa-cogs"></i>
+                </a>
+            </li>
+            <li class="bottom-nav__item">
+                <a href="index.html#project" class="bottom-nav__link">
+                    <i class="fas fa-project-diagram"></i>
+                </a>
+            </li>
+            <li class="bottom-nav__item">
+                <a href="index.html#contact" class="bottom-nav__link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
 
        <!--------------------------------- Gpt AI ----------------------------------->
@@ -168,15 +208,28 @@
     <!--------------------------------- FOOTER PAGE ----------------------------------->
 
     <footer class="footer">
-        <div class="footer__social">
-            <a href="https://www.facebook.com/param.panchal.104" class="footer__icon"><i class='bx bxl-facebook'></i></a>
-            <a href="https://www.instagram.com/_harsh__0095/" class="footer__icon"><i class='bx bxl-instagram'></i></a>
-            <a href="https://x.com/Param_0095" class="footer__icon"><i class='bx bxl-twitter'></i></a>
-        </div>
-        
-        <p class="footer__copy">&#169; Harshal. All rights reserved</p>
-    </footer>
+      <section>
+          <ul class="icon-list">
+              <li class="icon-item">
+                  <a href="https://x.com/Param_0095" class="icon-link twitter"><i
+                          class="fab fa-twitter"></i></a>
+              </li>
+              <li class="icon-item">
+                  <a href="https://www.facebook.com/param.panchal.104" class="icon-link facebook"><i
+                          class="fab fa-facebook-f"></i></a>
+              </li>
 
+              <li class="icon-item">
+                  <a href="https://www.instagram.com/_harsh__0095/" class="icon-link instagram"><i
+                          class="fab fa-instagram"></i></a>
+              </li>
+              <li class="icon-item">
+                  <a href="https://www.linkedin.com/in/harshal-panchal-a0b402258/" class="icon-link linkedin"><i
+                          class="fab fa-linkedin-in"></i></a>
+              </li>
+          </ul>
+      </section>
+  </footer>
     <!--------------------------------- SCRIPT PAGE ----------------------------------->
 
     <script src="https://unpkg.com/scrollreveal"></script>
