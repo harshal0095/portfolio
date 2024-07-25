@@ -677,8 +677,8 @@ body.dark-mode .button:hover {
   display: flex;
   justify-content: center;
 
-  margin-left: 15% ;
-  margin-right: 15%;
+  margin-left: 10% ;
+  margin-right: 10%;
   padding: 1rem 0rem; /* Reduced horizontal padding to bring the border closer on the sides */
   border: 2px solid rgb(204, 204, 214); /* Border */
   border-radius: 25px; /* Rounded corners */
