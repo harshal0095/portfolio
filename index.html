@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--------------------------------- HEAD ----------------------------------->
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
         integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous" />
-        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <title>Harshu</title>
     <link rel="icon" href="Favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-
     <!--------------------------------- HEADER ----------------------------------->
     <header class="l-header">
         <nav class="nav bd-grid">
@@ -51,7 +46,6 @@
                     </li>
                 </ul>
             </div>
-            
             <div class="nav__toggle" id="nav-toggle">
                 <i class='bx bx-menu'></i>
             </div>
@@ -59,11 +53,10 @@
                 <div class="theme-toggle" id="theme-toggle">
                     <i class='bx bx-moon' id="theme-icon"></i>
                 </div>
-
             </div>
-
         </nav>
     </header>
+
     <!--------------------------------- HOME PAGE ----------------------------------->
 
     <main class="l-main">
@@ -186,9 +179,12 @@
         <!--------------------------------- PROJECT PAGE ----------------------------------->
 
         <section class="work section" id="project">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects__container bd-grid">
-                <div class="projects__container">
+            <div class="toggle-menu">
+                <h2 class="section-title active" id="projects-toggle">Projects</h2>
+                <h2 class="section-title" id="experience-toggle">Experience</h2>
+            </div>
+            <div class="content-container">
+                <div class="projects__container bd-grid active" id="projects-content">
                     <div class="project__card">
                         <div class="icon icon-1"><i class="fas fa-laptop-code"></i></div>
                         <h3><a href="Gpt.html">Chat Ai</a></h3>
@@ -214,7 +210,23 @@
                         <h3><a href="#">Project Title 3</a></h3>
                     </div>
                 </div>
+                <div class="experience__container bd-grid" id="experience-content">
+
+<!--------------------------------- Add your experience content here ----------------------------------->
+
+                    <div class="experience__card">
+                        <div class="icon icon-1"><i class="fas fa-briefcase"></i></div>
+                        <h3><a href="#">Curateit</a></h3>
+                        <p class="highlighted-text">I am joined March 2024 in Curateit working on WebAppTesting</p>
+                    </div>
+                    <div class="experience__card">
+                        <div class="icon icon-2"><i class="fas fa-briefcase"></i></div>
+                        <h3>Experience 2</h3>
+                    </div>
+                </div>
+            </div>
         </section>
+        
 
         <!--------------------------------- CONTACT PAGE ----------------------------------->
 
@@ -237,12 +249,39 @@
                 <button type="submit" class="contact__button">Send Message</button>
             </form>
         </section>
-        
-        
-   
 
-    <!--------------------------------- FOOTER PAGE ----------------------------------->
+    <!--------------------------------- BOTTOM NAVIGATION (Mobile only) ----------------------------------->
+    <nav class="bottom-nav">
+        <ul class="bottom-nav__list">
+            <li class="bottom-nav__item">
+                <a href="#home" class="bottom-nav__link active-link">
+                    <i class="fas fa-home"></i>
+                </a>
+            </li>
+            <li class="bottom-nav__item">
+                <a href="#about" class="bottom-nav__link">
+                    <i class="fas fa-user"></i>
+                </a>
+            </li>
+            <li class="bottom-nav__item">
+                <a href="#skills" class="bottom-nav__link">
+                    <i class="fas fa-cogs"></i>
+                </a>
+            </li>
+            <li class="bottom-nav__item">
+                <a href="#project" class="bottom-nav__link">
+                    <i class="fas fa-project-diagram"></i>
+                </a>
+            </li>
+            <li class="bottom-nav__item">
+                <a href="#contact" class="bottom-nav__link">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
 
+    <!--------------------------------- FOOTER ----------------------------------->
     <footer class="footer">
         <section>
             <ul class="icon-list">
@@ -266,13 +305,9 @@
             </ul>
         </section>
     </footer>
-
-
-    <!--------------------------------- SCRIPT PAGE ----------------------------------->
-
+    <!--------------------------------- SCRIPT ----------------------------------->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
-
 </html>
