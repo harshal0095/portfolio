@@ -207,8 +207,9 @@ img {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      border-radius: 50px;
       padding: 10px 0;
-      box-shadow: 0 -2px 5px rgba(0,0,0,0.1); /* Optional shadow */
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.507); /* Optional shadow */
       z-index: 1000;
   }
 
@@ -245,7 +246,7 @@ img {
       bottom: 0;
       transform: translateX(-50%);
       width: 100%;
-      height: 3px; /* Thickness of the glow effect */
+      height: 3px; /* Thickness of the glow effect */ 
       background-color: teal; /* Glow color */
       opacity: 0;
       transition: opacity 0.3s; /* Smooth transition for glow effect */
