@@ -113,7 +113,6 @@ img {
   background-color: var(--first-color);
 }
 
-
 /*...............................LAYOUT...............................*/
 .bd-grid {
   max-width: 1024px;
@@ -134,7 +133,7 @@ img {
 
 /*...............................NAVBAR...............................*/
 .nav {
-  height: var(--header-height);
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -142,54 +141,84 @@ img {
   background-color: var(--navbar-background-color);
   
 }
-@media screen and (max-width: 767px) {
-  .nav__menu {
-    position: fixed;
-    top: var(--header-height);
-    right: -100%;
-    width: 80%;
-    height: 100%;
-    padding: 2rem;
-    background-color: var(--second-color);
-    transition: 0.5s;
+.bottom-nav {
+  display: none; /* Hide by default */
+}
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  .nav {
+      display: none; /* Hide desktop navigation on mobile */
+  }
+
+  .bottom-nav {
+      display: flex;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff; /* Change as needed */
+      border-top: 1px solid #ddd; /* Optional border */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 50px;
+      padding: 10px 0;
+      box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.507); /* Optional shadow */
+      z-index: 1000;
+  }
+
+  .bottom-nav__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+  }
+
+  .bottom-nav__item {
+      text-align: center;
+  }
+
+  .bottom-nav__link {
+      text-decoration: none;
+      color: #000000dd; /* Default color */
+      font-size: 20px; /* Adjust size as needed */
+      position: relative;
+      transition: color 0.3s, box-shadow 0.3s; /* Smooth transition for color and shadow */
+  }
+
+
+  .bottom-nav__link:hover {
+      color:teal; /* Highlight color */
+  }
+
+  .bottom-nav__link::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 100%;
+      height: 3px; /* Thickness of the glow effect */ 
+      background-color: teal; /* Glow color */
+      opacity: 0;
+      transition: opacity 0.3s; /* Smooth transition for glow effect */
+  }
+
+  .bottom-nav__link:hover::after {
+      opacity: 1;
+  }
+
+  .bottom-nav__link i {
+      display: block;
+      margin-bottom: 5px;
   }
 }
-.nav__item {
-  margin-bottom: var(--mb-4);
-}
-.nav__link {
-  position: relative;
-  color: var(--navbar-text-color);
-}
-.nav__link:hover {
-  position: relative;
-}
-.nav__link:hover::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 0.18rem;
-  left: 0;
-  top: 2rem;
-  background-color: var(--first-color);
-}
-.nav__logo {
-  color: var(--navbar-text-color);
-}
-.nav__toggle {
-  color: var(--navbar-text-color);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
 
-
-/*...............................Show menu...............................*/
-.show {
-  left: 0;
-  text-align: right;
-}
 /*...............................Projects Section............................... */
-/* Default (light mode) styles */
+
 body {
     background-color: #ffffff;
     color: #000000;
@@ -262,10 +291,19 @@ body.dark-mode .ChatAi__card h3 a, body.dark-mode .wow__card h3 a {
 
   box-shadow: 6px 6px 16px #bebebe, -6px -6px 16px #ffffff91;
 }
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .ChatAi__container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 1rem;
+  }
 
-
+  .ChatAi__card {
+    padding: 0.5rem;
+    border-radius: 15px;
+  }
+}
 /*............................... Light Mode ...............................*/
-
 
 /* Dark Mode */
 body.dark-mode {
@@ -320,31 +358,93 @@ body.dark-mode {
 
 
 /*...............................FOOTER ...............................*/
-.dark-mode {
-  --navbar-background-color: #000000; /* Example dark mode background color */
-  --footer-text-color: #ffffff; /* Text color for dark mode */
-  --footer-icon-color: #ffffff; /* Icon color for dark mode */
+
+:root {
+  --light-background: #e0e5ec; /* Light background color */
+  --dark-background: #333333; /* Dark background color for dark mode */
+  --icon-color: #000; /* Default icon color for both modes */
 }
 
 .footer {
-  background-color: var(--navbar-background-color);
-  color: var(--footer-text-color);
-  text-align: center;
-  font-weight: var(--font-semi);
-  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #00000000; /* Transparent background */
+  position: relative; /* Ensure it respects the box-shadow */
+  box-shadow: 0 -8px 16px rgba(0, 0, 0, 0.116); /* Upper shadow */
+}
+.icon-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
-.footer__title,
-.footer__copy {
-  font-size: 1.5rem; /* Adjust font size as per your design */
+.icon-item {
+  position: relative;
+}
+.icon-link:hover {
+  box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.5), inset -4px -4px 8px rgba(255, 255, 255, 0.9); /* Inset shadow for hover effect */
 }
 
-.footer__icon {
-  font-size: 2rem; /* Increase the font size for the icons */
-  color: var(--footer-icon-color);
-  margin: 0 var(--mb-2);
+.icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #00000000;
+  box-shadow: 8px 8px 16px  rgba(163, 177, 198, 0.5); /* Simplified shadow */
+  transition: all 0.3s ease;
+  font-size: 24px;
 }
 
+.icon-link i {
+  pointer-events: none;
+}
+
+/* Specific Colors for Icons */
+.icon-link.twitter {
+  color: #1da1f2;
+}
+
+.icon-link.facebook {
+  color: #1877f2;
+}
+
+.icon-link.instagram {
+  color: #c32aa3;
+}
+
+.icon-link.linkedin {
+  color: #0077b5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .icon-list {
+    flex-direction: row;
+    align-items: center;
+  }
+  .icon-link {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon-link {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+  .footer {
+    padding: 10px;
+  }
+}
 
 /*...............................MEDIA QUERIES...............................*/
 @media screen and (max-width: 320px) {
@@ -465,9 +565,6 @@ body.dark-mode {
   }
 }
 
-
-
-
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
@@ -475,8 +572,6 @@ body.dark-mode {
   --navbar-background-color: #f8f9fa;
   --navbar-text-color: #000000;
 }
-
-
 
 /* Dark Mode Toggle */
 .theme-toggle {
@@ -519,8 +614,6 @@ body.dark-mode {
   color: #ffffff; /* White icon color for dark mode */
 }
 
-
-
 /* Default (light mode) styles */
 body {
     background-color: #ffffff;
@@ -540,9 +633,6 @@ body.dark-mode {
 body.dark-mode .ChatAi__card h3 a {
     color: white; /* h3 links color in dark mode */
 }
-
-
-
 
 .container {
     display: flex;
