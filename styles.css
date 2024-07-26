@@ -118,7 +118,7 @@ img {
   padding-bottom: 2rem;
 }
 
-/*...............................LAYOUT bd-grid...............................*/
+/*...............................LAYOUT BD-GRID...............................*/
 .bd-grid {
   max-width: 1024px;
   display: grid;
@@ -207,7 +207,7 @@ img {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      border-radius: 20px;
+      border-radius: 50px;
       padding: 10px 0;
       box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.507); /* Optional shadow */
       z-index: 1000;
@@ -262,8 +262,10 @@ img {
       margin-bottom: 5px;
   }
 }
-/*............ Dark Mode Toggle icon css ............*/
+/*...............................NAVBAR END...............................*/
 
+
+/*...............................DARK TOGLLE ICON...............................*/
 
 .theme-toggle {
   width: 40px;
@@ -305,7 +307,7 @@ img {
   color: #ffffff; /* White icon color for dark mode */
 }
 
-/*...............................HOME ...............................*/
+/*...............................HOME PAGE...............................*/
 
 
 .home {
@@ -563,8 +565,10 @@ body.dark-mode .button:hover {
   color: #333;
 }
 
+/*...............................HOME PAGE END...............................*/
 
-/*...............................ABOUT ...............................*/
+
+/*...............................ABOUT PAGE...............................*/
 .about__container {
   row-gap: 2rem;
   text-align: center;
@@ -598,9 +602,9 @@ body.dark-mode .button:hover {
   transition: box-shadow 1s ease;
 }
 
+/*...............................ABOUT PAGE END...............................*/
 
-
-/*...............................SKILLS...............................*/
+/*...............................SKILLS PAGE...............................*/
 .skills__container {
   row-gap: 2rem;
   text-align: center;
@@ -671,7 +675,9 @@ body.dark-mode .button:hover {
   transition: box-shadow 1s ease;
 }
 
-/*...............................Projects Section............................... */
+/*...............................SKILLS PAGE END...............................*/
+
+/*...............................PROJECTS SECTION PAGE...............................*/
 
 /* Toggle Menu */
 .toggle-menu {
@@ -817,9 +823,9 @@ body.dark-mode .button:hover {
   }
 }
 
+/*...............................PROJECTS SECTION...............................*/
 
-
-/*...............................CONTACT ...............................*/
+/*...............................CONTACT...............................*/
 :root {
 
   --primary-color: #ffffff;
@@ -869,7 +875,6 @@ body.dark-mode .button:hover {
 .contact__field textarea {
   width: 300px;
   padding: 20px;
-
   border-radius: 10px;
   border: none;
   background: transparent;
@@ -919,7 +924,6 @@ body.dark-mode .button:hover {
               inset -5px -5px 10px var(--shadow-light);
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .section-title {
@@ -963,6 +967,7 @@ body.dark-mode .button:hover {
   }
 }
 
+/*...............................CONTACT END...............................*/
 
 /*...............................FOOTER ...............................*/
 
@@ -1008,7 +1013,6 @@ body.dark-mode .button:hover {
   font-size: 24px;
 }
 
-
 .icon-link i {
   pointer-events: none;
 }
@@ -1053,9 +1057,11 @@ body.dark-mode .button:hover {
     padding: 10px;
   }
 }
+/*...............................FOOTER END...............................*/
 
 
-/*-------------------------------------------- Scroll bar styling for light mode --------------------------------------------*/
+/*...............................Scroll bar styling for light mode...............................*/
+
 .light-mode::-webkit-scrollbar {
   width: 10px;
 }
@@ -1089,3 +1095,4 @@ body.dark-mode .button:hover {
   background: #777; /* Even lighter grey when hovering over the thumb */
 }
 
+/*...............................Scroll bar styling for light mode End...............................*/
